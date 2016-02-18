@@ -22,11 +22,15 @@ Andrew Martin - Stanford University - Use at your own peril!
 
 # Example Call
 token: ABC123123CBA
+
 delta: 10:0:0
+
 format: json
 
 # Example Output
+
 (csv format)
+
 pk,event,timestamp
 R04-0002,UPDATE,20160208131413
 R04-0038,UPDATE,20160208131439
@@ -36,6 +40,7 @@ R02-0016,UPDATE,20160210102744
 R02-0030,UPDATE,20160210103921
 
 (json format)
+
 [
   {"pk":"R06-0003","event":"UPDATE","ts":"20160218052431"},
   {"pk":"R06-0010","event":"UPDATE","ts":"20160218052459"},
