@@ -1,23 +1,22 @@
 # redcap-plugin-last-modified
 An API-like plugin that returns record modification timestamps and details.  
 
-/**
-*	This script tries to output a list of last modified dates for records in a project
-*	Requires:
-*		token = API TOKEN
-*	Optional:
-*		record = a single record id, or an array of record ids to filter by
-*		format = csv or json (default) to control the output format
-*		delta = restrict to records last modified in past h:m:s
-*		since = log timestamp to begin search on (yyyymmddhhmmss).  If specified, only times >= this will be used.
-*	Output contains:
-*		pk (primary key or record_id)
-*		event (UPDATE/INSERT/DELETE)
-*		ts (timestamp in format YmdHis)
-*
-*	Andrew Martin - Stanford University - Use at your own peril!
-*
-**/
+This script tries to output a list of last modified dates for records in a project.
+This is used by a cron task to keep data in a large redcap project in sync with an outside system.  Rather than re-pushing the entire dataset every interval, only those records that have been modified are pushed to the external system.
+
+Requires:
+*	token = API TOKEN
+Optional:
+*	record = a single record id, or an array of record ids to filter by
+*	format = csv or json (default) to control the output format
+*	delta = restrict to records last modified in past h:m:s
+*	since = log timestamp to begin search on (yyyymmddhhmmss).  If specified, only times >= this will be used.
+Output contains:
+*	pk (primary key or record_id)
+*	event (UPDATE/INSERT/DELETE)
+*	ts (timestamp in format YmdHis)
+
+Andrew Martin - Stanford University - Use at your own peril!
 
 # Example Call
 token: ABC123123CBA
