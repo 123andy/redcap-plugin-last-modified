@@ -6,11 +6,13 @@ This is used by a cron task to keep data in a large redcap project in sync with 
 
 Requires:
 *	token = API TOKEN
+
 Optional:
 *	record = a single record id, or an array of record ids to filter by
 *	format = csv or json (default) to control the output format
 *	delta = restrict to records last modified in past h:m:s
 *	since = log timestamp to begin search on (yyyymmddhhmmss).  If specified, only times >= this will be used.
+
 Output contains:
 *	pk (primary key or record_id)
 *	event (UPDATE/INSERT/DELETE)
